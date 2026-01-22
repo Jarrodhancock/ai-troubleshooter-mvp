@@ -1,0 +1,18 @@
+{ "name": "ai-troubleshooter Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "workspaceFolder": "/workspaces/ai-troubleshooter-mvp",
+  "forwardPorts": [5173, 8787],
+  "postStartCommand": "bash .devcontainer/post-start.sh",
+  "portsAttributes": {
+    "5173": { "label": "frontend", "onAutoForward": "openBrowserIfPossible" },
+    "8787": { "label": "backend",  "onAutoForward": "notify" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
